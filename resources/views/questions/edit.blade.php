@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('questions.common')
 
-    <title>Questions</title>
-</head>
-<body>
-<div>
+@section('manage-questions')
     <form method="POST" action="/questions/{{$question->id}}">
         @method('PUT')
         @csrf
@@ -27,6 +20,5 @@
         @csrf
         <button>Delete</button>
     </form>
-</div>
-</body>
-</html>
+@endsection
+
