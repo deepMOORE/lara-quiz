@@ -2,10 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Models\Answer;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class PostFactory extends Factory
+class AnswerFactory extends Factory
 {
+    protected $model = Answer::class;
+
     /**
      * Define the model's default state.
      *
@@ -14,8 +17,7 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->text(20),
-            'content' => $this->faker->text(300),
+            'content' => $this->faker->realText('10')
         ];
     }
 }

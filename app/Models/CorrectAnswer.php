@@ -2,21 +2,16 @@
 
 namespace App\Models;
 
-use Database\Factories\PostFactory;
+use Database\Factories\CorrectAnswerFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class CorrectAnswer extends Model
 {
-    protected $fillable = [
-        'title',
-        'content'
-    ];
-
     use HasFactory;
 
     protected static function newFactory()
     {
-        return PostFactory::new();
+        return CorrectAnswerFactory::new();
     }
 }

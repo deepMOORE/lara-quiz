@@ -1,15 +1,15 @@
 <?php
 
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\QuestionController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/posts', [PostController::class, 'index']);
-Route::post('/posts', [PostController::class, 'store']);
-Route::get('/posts/create', [PostController::class, 'create']);
-Route::get('/posts/{post}/edit', [PostController::class, 'edit']);
-Route::put('/posts/{post}', [PostController::class, 'update']);
-Route::delete('/posts/{post}', [PostController::class, 'destroy']);
+Route::get('/questions', [QuestionController::class, 'index']);
+Route::post('/questions', [QuestionController::class, 'store']);
+Route::get('/questions/create', [QuestionController::class, 'create']);
+Route::get('/questions/{question}/edit', [QuestionController::class, 'edit']);
+Route::put('/questions/{question}', [QuestionController::class, 'update']);
+Route::delete('/questions/{questionId}', [QuestionController::class, 'destroy']);

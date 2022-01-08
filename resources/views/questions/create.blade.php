@@ -4,19 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Posts</title>
+    <title>Questions</title>
 </head>
 <body>
 <div>
-    <form method="POST" action="/posts">
+    <form method="POST" action="/questions">
         @csrf
-        <div>
-            <label for="title">Title: </label>
-            <input id="title" name="title"/>
-        </div>
         <div>
             <label for="content">Content: </label>
             <input id="content" name="content"/>
+        </div>
+        <div>
+            <label for="type">Type: </label>
+            <input id="type" name="type"/>
         </div>
         <button>Create</button>
     </form>
