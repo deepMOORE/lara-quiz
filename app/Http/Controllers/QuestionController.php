@@ -9,7 +9,9 @@ class QuestionController extends Controller
 {
     public function index()
     {
-        $questions = Question::all();
+        $questions = Question::query()
+            ->with('answers')
+            ->get();
 
         return view('questions.index', ['questions' => $questions]);
     }

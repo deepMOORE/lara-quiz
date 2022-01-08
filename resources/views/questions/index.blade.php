@@ -15,8 +15,13 @@
     <div>
         @foreach($questions as $question)
             <article>
-                <a href="/questions/{{$question->id}}/edit">{{$question->content}}</a>
+                <span>This is a {{$question->type}} question</span>
+                <a href="/questions/{{$question->id}}/edit">{{$question->content}}</a> <br>
+                @foreach($question->answers as $answer)
+                    <span>Answer: {{$answer->content}}</span> <br>
+                @endforeach
             </article>
+            <br>
         @endforeach
     </div>
 </div>
