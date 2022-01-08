@@ -23,10 +23,6 @@ class QuestionSeeder extends Seeder
         $questions = $this->createQuestions($userId);
 
         foreach ($questions as $question) {
-            if ($question->type === QuestionType::TEXT) {
-                continue;
-            }
-
             if ($question->type === QuestionType::CHECK) {
                 $answers = $this->createAnswersForQuestion($question->id);
 
@@ -77,7 +73,7 @@ class QuestionSeeder extends Seeder
 
     private function createQuestions(int $userId): Collection
     {
-        return Question::factory()->count(5)->create([
+        return Question::factory()->count(8)->create([
             'user_id' => $userId
         ]);
     }

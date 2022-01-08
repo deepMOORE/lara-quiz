@@ -1,8 +1,8 @@
 @extends('welcome')
 
 @section('content')
-    <div>
-        <h1>Question manager</h1>
+    <h1>Question manager</h1>
+    <div class="add-question-button">
         <a href="/questions/create">Add question</a>
     </div>
     <div>

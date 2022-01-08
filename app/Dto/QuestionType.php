@@ -6,7 +6,6 @@ use MyCLabs\Enum\Enum;
 
 class QuestionType extends Enum
 {
-    public const TEXT = 'text';
     public const RADIO = 'radio';
     public const CHECK = 'check';
 }

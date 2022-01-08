@@ -17,6 +17,20 @@
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
+                background-color: #f7fafc;
+                margin-left: 20px;
+            }
+            .add-question-button {
+                font-size: 20px;
+                text-align: center;
+                background-color: #bcd0ff;
+                height: 30px;
+                width: 300px;
+                border-radius: 15px;
+            }
+            .question-title {
+                font-style: italic;
+                font-size: 19px;
             }
         </style>
     </head>
